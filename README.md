@@ -75,6 +75,49 @@ To give another example, assuming a logger interface is designed to serve both l
 
 ### Factory Pattern
 
+**Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses.**
+
+For example, assuming a company's employee management system has an object for HR and an object for employee. HR adds new employee according to employee's types with if-else statements as below.
+
+```java
+public void addNewEmployee(int no, String name, int year, String department, String type, String departmentManaged,
+			double bonus) {
+		Employee employee = null;
+		switch (type) {
+		case "Employee":
+			employee = new Employee(no, name, year, department, type);
+			employees.add(employee);
+			break;
+			
+		case "Manager":
+			employee = new Employee(no, name, year, department, type, departmentManaged);
+			employees.add(employee);
+			break;
+			
+		case "Director":
+			employee = new Employee(no, name, year, department, type, departmentManaged, bonus);
+			employees.add(employee);
+			break;
+		}
+	}
+```
+
+In the future, if employee's business logic gets complex, addNewEmployee method would become an if-else hell.
+
+Factory method solves the problem that where to create objects by abstracting the creations of objects and defining creations in factory methods rather than in client codes. Factory method is responsible for creation of objects with interfaces and these operations happen in subclasses. Each subclass creates a different objects.
+
+Instead of above structure, creation of objects can be handled by an interface called Factory with a single method of create(), and the implementation classes of EmployeeFactory, ManagerFactory and DirectorFactory.
+
+```java
+public interface Factory {
+	public Employee create();
+}
+```
+
+But still, create method has no parameters and this can cause some problems for some system. Even tough passing parameters instead of collecting them in the method when possible is a very bad practice, sometimes it can be must to pass parameters. There is trade-off here, fewer parameters passed, more the factory method can be benefit.
+
+The main goal of factory method is creating just one object. By this way, if-else hell can be removed from the equation. So, creating a class for factory, not an interface, that creates all kinds of objects related to job conflicts the principles SRP and OCP. Because this means handling more than one task in one place and opening for modification.
+ 
 #### Factory Method
 
 #### Abstract Factory Method
@@ -120,5 +163,9 @@ To give another example, assuming a logger interface is designed to serve both l
 ### State Pattern
 
 ### Strategy Pattern
+
+**Intent:** Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independent from clients that use it.
+
+
 
 ### Template Pattern
