@@ -75,7 +75,7 @@ To give another example, assuming a logger interface is designed to serve both l
 
 ### Factory Pattern
 
-**Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses.**
+***Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses.***
 
 For example, assuming a company's employee management system has an object for HR and an object for employee. HR adds new employee according to employee's types with if-else statements as below.
 
@@ -117,10 +117,20 @@ public interface Factory {
 But still, create method has no parameters and this can cause some problems for some system. Even tough passing parameters instead of collecting them in the method when possible is a very bad practice, sometimes it can be must to pass parameters. There is trade-off here, fewer parameters passed, more the factory method can be benefit.
 
 The main goal of factory method is creating just one object. By this way, if-else hell can be removed from the equation. So, creating a class for factory, not an interface, that creates all kinds of objects related to job conflicts the principles SRP and OCP. Because this means handling more than one task in one place and opening for modification.
- 
-#### Factory Method
 
-#### Abstract Factory Method
+
+### Abstract Factory Pattern
+
+***Provide an interface for creating families of related of dependent objects without specifying their concrete classes.***
+
+Abstract factory is used for creating a group of objects instead of just one. Factory method abstracts only one object, abstract factory more than one. In that sense, abstract factory has more than one factory method.
+
+The group of objects must be related and dependent with each other. A family of related product objects is designed to be used together, and this constraint must be enforced.
+
+For example, for a windowing system, a family of objects could be Button, Label, List, Scrollbar etc.
+
+There are some constraints while using abstract factory, such as if different kinds of objects are needed to create by different platforms, abstract factory interfaces must be divided. For example, if there are two different university with different kinds of features such as one of them has virtual class but the other does not, these universities' abstract factory interfaces must be divided. Similar problem can occur with different parameters with same objects and again it can be solved by dividing the interfaces.
+
 
 ### Singleton Pattern
 
