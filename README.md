@@ -110,7 +110,7 @@ Instead of above structure, creation of objects can be handled by an interface c
 
 ```java
 public interface Factory {
-	public Employee create();
+    Employee create();
 }
 ```
 
@@ -183,6 +183,12 @@ Decorator pattern often requires passing the same type of object to an abstract 
 ### Memento Pattern
 
 ### Observer Pattern
+
+***Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.***
+
+From time to time it is desirable to be aware of changes in the state of some objects. Querying for these objects periodically is a way of achieving it. However, this approach requires unnecessary operation in the system and causes uncertain delays.
+
+Observer pattern provides a subscription solution that notifies listeners of the objects. Observable, subscribed object, can be observed by observer, listener, by receiving event notifications. Therefore, on observables there is an interface that allows subscription, and on observers there is an interface that provides receiving event notifications. This pattern is also known as Publisher-Subscriber, Producer-Consumer or Event-Notification.
 
 ### State Pattern
 

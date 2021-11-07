@@ -4,41 +4,41 @@ public class Test {
 
 	public static void main(String[] args) {
 		Test test = new Test();
-		test.makeAyvalıkToast1();
-		test.makeAyvalıkToast2();
+		test.makeAyvalikToast1();
+		test.makeAyvalikToast2();
 	}
 	
-	public void makeAyvalıkToast1(){
-		Toastable ayvalıkToast = new ToastBread("Toast bread", 5);
-		System.out.println("Cost: " + ayvalıkToast.calculatePrice());
-		printToppings(ayvalıkToast);
-		ayvalıkToast = new Cheese(ayvalıkToast, "Cheddar cheese", 3);
-		System.out.println("Cost: " + ayvalıkToast.calculatePrice());
-		printToppings(ayvalıkToast);
-		ayvalıkToast = new Sausage(ayvalıkToast, "Sausage", 3);
-		System.out.println("Cost: " + ayvalıkToast.calculatePrice());
-		printToppings(ayvalıkToast);
-		ayvalıkToast = new Tomato(ayvalıkToast, "Tomato", 2);
-		System.out.println("Cost: " + ayvalıkToast.calculatePrice());
-		printToppings(ayvalıkToast);
-		ayvalıkToast = new Ketchup(ayvalıkToast, "Ketchup", 1);
-		System.out.println("Cost: " + ayvalıkToast.calculatePrice());
-		printToppings(ayvalıkToast);
-		ayvalıkToast = new Salad(ayvalıkToast, "Russian salad", 2);
-		System.out.println("Cost: " + ayvalıkToast.calculatePrice());
-		printToppings(ayvalıkToast);
+	public void makeAyvalikToast1(){
+		Toastable ayvalikToast = new ToastBread("Toast bread", 5);
+		System.out.println("Cost: " + ayvalikToast.calculatePrice());
+		printToppings(ayvalikToast);
+		ayvalikToast = new Cheese(ayvalikToast, "Cheddar cheese", 3);
+		System.out.println("Cost: " + ayvalikToast.calculatePrice());
+		printToppings(ayvalikToast);
+		ayvalikToast = new Sausage(ayvalikToast, "Sausage", 3);
+		System.out.println("Cost: " + ayvalikToast.calculatePrice());
+		printToppings(ayvalikToast);
+		ayvalikToast = new Tomato(ayvalikToast, "Tomato", 2);
+		System.out.println("Cost: " + ayvalikToast.calculatePrice());
+		printToppings(ayvalikToast);
+		ayvalikToast = new Ketchup(ayvalikToast, "Ketchup", 1);
+		System.out.println("Cost: " + ayvalikToast.calculatePrice());
+		printToppings(ayvalikToast);
+		ayvalikToast = new Salad(ayvalikToast, "Russian salad", 2);
+		System.out.println("Cost: " + ayvalikToast.calculatePrice());
+		printToppings(ayvalikToast);
 	}
 	
-	public void makeAyvalıkToast2(){
-		Toastable ayvalıkToast = new ToastBread("Toast bread", 5);
-		ayvalıkToast = new Cheese(ayvalıkToast, "Cheddar cheese", 3);
-		ayvalıkToast = new Sausage(ayvalıkToast, "Sucuk", 3);
-		ayvalıkToast = new Tomato(ayvalıkToast, "Tomato", 2);
-		ayvalıkToast = new Ketchup(ayvalıkToast, "Ketchup", 1);
-		ayvalıkToast = new Salad(ayvalıkToast, "Russian salad", 2);
-		System.out.println("\nCost: " + ayvalıkToast.calculatePrice());
+	public void makeAyvalikToast2(){
+		Toastable ayvalikToast = new ToastBread("Toast bread", 5);
+		ayvalikToast = new Cheese(ayvalikToast, "Cheddar cheese", 3);
+		ayvalikToast = new Sausage(ayvalikToast, "Sucuk", 3);
+		ayvalikToast = new Tomato(ayvalikToast, "Tomato", 2);
+		ayvalikToast = new Ketchup(ayvalikToast, "Ketchup", 1);
+		ayvalikToast = new Salad(ayvalikToast, "Russian salad", 2);
+		System.out.println("\nCost: " + ayvalikToast.calculatePrice());
 		
-		printToppings(ayvalıkToast);
+		printToppings(ayvalikToast);
 	}
 
 	private void printToppings(Toastable tost) {
