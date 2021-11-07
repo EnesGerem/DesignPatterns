@@ -150,6 +150,20 @@ There are some constraints while using abstract factory, such as if different ki
 
 ### Decorator Pattern
 
+***Attact additional responsible to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.***
+
+Often times, new responsibilities are given to objects instead of whole class and inheritence is used to give these responsibilities. Main problem of this approach, inheritence has a compile-time structure. Each inheritence requires a new recompilation. So that, changing code & recompiling code and the number of subclasses becomes a big problem.
+
+**Favor object composition over class inheritance.**
+
+Object composition is a runtime structure. Inheritance is static, composition is dynamic. 
+
+Assuming there is a toast maker and adds different ingredients to toasts according to clients' wishes. So, instead of creating every ingredients' combinations, a Toastable interface can be created and an abstract class of Topping implements this interface to add each ingredient on top of the current toast.
+
+This method is like a pipeline and simply adding ingredients at anytime to current state of the toast without effecting previous ingredients.
+
+Decorator pattern often requires passing the same type of object to an abstract class's constructor. So that, previously added items are visible to currently to be added item and the current item adds itself following to previously added items.
+
 ### Facade Pattern
 
 ### Flyweight Pattern
