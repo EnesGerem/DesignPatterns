@@ -188,8 +188,12 @@ Decorator pattern often requires passing the same type of object to an abstract 
 
 ### Strategy Pattern
 
-**Intent:** Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independent from clients that use it.
+***Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independent from clients that use it.***
 
+Often times, in software development there are more than one way to resolve an issue. Business logic of software gets bigger and these solutions are sometimes already defined algorithms or sometimes basicly different methods. For example, there could be more than one way of validating a data and these validations should not be handled with if-else statements. This solution is never suitable for long run, ignores future changes which conflicts with SRP and OCP.
 
+To solve these problems, putting different algorithms abstracted from client in a way of interchangeable. In this way, algorithms would be seperated from each other so they will not be dependent on each other and they will be abstracted. Strategy pattern's solution constructing an interface that implemented by sibling classes. Each sibling does a different algorithm and a context object in the program decides which sibling to use. Therefore, new strategies can be added to system easily.
+
+If there is more than one way of resolve an issue, strategy pattern should be used and an abstraction of algorithms should be provided to system.
 
 ### Template Pattern
