@@ -1,6 +1,8 @@
 package main.creational.abstactfactory.gui;
 
 public class WinFactory implements GUIFactory {
+
+	@Override
     public Component createButton() {
         return new WinButton();
     }

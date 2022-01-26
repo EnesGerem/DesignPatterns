@@ -2,9 +2,9 @@ package main.creational.abstactfactory.gui;
 
 interface GUIFactory {
 	
-    public Component createButton();
+    Component createButton();
+
+    Component createList();
     
-    public Component createList();
-    
-    public Component createTable();
+    Component createTable();
 }
